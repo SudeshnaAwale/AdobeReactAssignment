@@ -19,7 +19,7 @@ const ProductList = () => {
 
   useEffect(() => {
     getProducts();
-  });
+  },[]);
 
   const Loading = () => {
     return <>Loading.....</>;
