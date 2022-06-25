@@ -10,7 +10,8 @@ const ProductList = () => {
   const dispatch = useDispatch();
 
   console.log(allProduct);
-  const getProducts = async () => {
+  const getProducts = async (e) => {
+    e.preventDefault();
     const response = await fetch("https://fakestoreapi.com/products/");
     const data = await response.json();
     dispatch(setAllitem(data));
